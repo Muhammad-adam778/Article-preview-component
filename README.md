@@ -13,11 +13,12 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 ## Links
 
 - Live Site Url: [Demo](https://muhammad-adam778.github.io/Article-preview-component/)
-- Solution Url: [Solution]()
+- Solution Url: [Solution](https://www.frontendmentor.io/solutions/article-preview-component-YFd30iu68U)
 
 ## Built with 🔨️
 
 - Semantic HTML5 markup
+- CSS FlexBox
 - SASS
 - JS
 
