@@ -1,0 +1,22 @@
+// Import Variables
+@use "../helpers/vars" as *;
+// Import Mixins
+@use "../helpers/mixins" as *;
+
+/* Global Rules */
+@include global-rules();
+/* ----------------------------------- */
+
+/* Body */
+body {
+  min-height: 100vh;
+  font-family: $manrope-font;
+  main {
+    min-height: 100vh;
+    background-color: $very-light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* ----------------------------------- */

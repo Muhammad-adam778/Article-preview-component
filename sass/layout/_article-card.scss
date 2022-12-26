@@ -1,0 +1,218 @@
+// Import Variables
+@use "../helpers/vars" as *;
+// Import Mixins
+@use "../helpers/mixins" as *;
+
+/* Article Card*/
+article {
+  width: 325px;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #fff;
+  margin-bottom: 10px;
+  @include breakpoints("small+") {
+    display: flex;
+    width: 725px;
+    overflow: visible;
+  }
+  > figure {
+    height: 218px;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+    }
+    @include breakpoints("small+") {
+      width: 35%;
+      height: 295px;
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+      overflow: hidden;
+      img {
+        max-width: 124%;
+        width: 124%;
+        height: 100%;
+      }
+    }
+  }
+  .preview {
+    position: relative;
+    padding: {
+      top: 35px;
+      left: 30px;
+      right: 38px;
+    }
+    @include breakpoints("small+") {
+      width: 65%;
+      padding-bottom: 30px;
+    }
+    h1 {
+      font-weight: 700;
+      font-size: 16px;
+      color: $main-color;
+      margin-bottom: 15px;
+    }
+    > p {
+      font-weight: 500;
+      font-size: $main-font-size;
+      color: $second-color;
+      margin-bottom: 20px;
+    }
+    @include breakpoints("small+") {
+      h1 {
+        font-size: 22px;
+      }
+      > p {
+        font-size: 14px;
+      }
+    }
+    > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      position: relative;
+
+      padding: 16px 0;
+      @include breakpoints("small+") {
+        padding: 0;
+      }
+      .about {
+        display: flex;
+        // Avatar
+        figure {
+          overflow: hidden;
+          @include circle(48px);
+          margin-right: 15px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .info {
+          font-size: $main-font-size;
+          // Author Name
+          p.author-name {
+            color: $main-color;
+            font-weight: 700;
+            margin-bottom: 4px;
+          }
+          // Date
+          p.date {
+            color: $second-color;
+            font-weight: 500;
+          }
+        }
+      }
+      // Share
+      .share {
+        display: flex;
+        align-items: center;
+        ul {
+          position: absolute;
+          bottom: -100%;
+          opacity: 0;
+          transition: 0.3s;
+          left: -30px;
+          display: flex;
+          align-items: center;
+          column-gap: 15px;
+          width: 200%;
+          height: 100%;
+          padding-left: 30px;
+          background-color: $main-color;
+          @include breakpoints("small+") {
+            flex-direction: column;
+            left: 96%;
+            bottom: 70px;
+            transform: translateX(-50%);
+            justify-content: center;
+            width: 65px;
+            height: 0px;
+            border-radius: 8px;
+            row-gap: 12px;
+            padding-left: 0;
+            box-shadow: 0px 2px 8px 0px hsl(217deg 19% 35% / 34%);
+            &::before {
+              content: "";
+              position: absolute;
+              left: 50%;
+              bottom: -20px;
+              transform: translateX(-50%);
+              border: 10px solid;
+              border-color: $main-color transparent transparent transparent;
+            }
+          }
+          @include breakpoints("medium+") {
+            flex-direction: row;
+            width: 200px;
+            box-shadow: 4px 4px 15px 0px hsl(217deg 19% 35% / 34%);
+          }
+          li {
+            &:first-child {
+              text-transform: uppercase;
+              letter-spacing: 3px;
+              color: $third-color;
+              font-size: 15px;
+              user-select: none;
+              @include breakpoints("small+") {
+                font-size: 13px;
+                position: relative;
+                top: -6px;
+              }
+              @include breakpoints("medium+") {
+                top: 0;
+              }
+            }
+            > a {
+              display: block;
+              width: 20px;
+              height: 20px;
+              svg path {
+                transition: 0.3s;
+              }
+            }
+            &:not(:first-child):hover {
+              svg {
+                opacity: 0.8;
+              }
+            }
+          }
+          &.show {
+            opacity: 1;
+            @include breakpoints("mobile") {
+              bottom: 0%;
+            }
+            @include breakpoints("small+") {
+              height: 160px;
+            }
+            @include breakpoints("medium+") {
+              height: 45px;
+            }
+            // Share Button
+            + button {
+              background-color: $second-color;
+              &:hover {
+                background-color: rgb(109 127 151 / 0.8);
+              }
+              svg path {
+                fill: #fff;
+              }
+            }
+          }
+        }
+        // Share Button
+        button {
+          position: relative;
+          z-index: 1000;
+          @include circle(35px);
+          transition: 0.3s;
+          background-color: $very-light;
+          &:hover {
+            background-color: hsl(210deg 21% 89%);
+          }
+        }
+      }
+    }
+  }
+}
+/* ------------------------------------------------ */

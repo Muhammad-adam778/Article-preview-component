@@ -1,0 +1,65 @@
+// Global Rules
+@mixin global-rules() {
+  * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  img,
+  button {
+    user-select: none;
+  }
+  button {
+    border: none;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+  }
+}
+
+// Breakpoints
+@mixin breakpoints($point) {
+  @if ($point == "mobile") {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if ($point == "small") {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if ($point == "medium") {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if ($point == "large") {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if ($point == "small+") {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if ($point == "medium+") {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else {
+    @error " '#{$point}' Is Invalid Screen Breakpoint";
+  }
+}
+
+// Make Circle
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
