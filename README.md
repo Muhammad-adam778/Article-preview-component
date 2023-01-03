@@ -25,4 +25,4 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 ## Author
 
 - Frontend Mentor - [@Muhammad-adam778](https://www.frontendmentor.io/profile/Muhammad-adam778)
-- Linkedin - [@muhammad-78](https://www.linkedin.com/in/muhammad-78)
+- Linkedin - [@Muhammad-adam778](https://www.linkedin.com/in/Muhammad-adam778)
