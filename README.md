@@ -12,7 +12,7 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 
 ## Links
 
-- Live Site Url: [Demo](https://muhammad-adam778.github.io/Article-preview-component/)
+- Live Site Url: [Demo](https://muhammad-abdusalam.github.io/Article-preview-component/)
 - Solution Url: [Solution](https://www.frontendmentor.io/solutions/article-preview-component-YFd30iu68U)
 
 ## Built with 🔨️
@@ -25,4 +25,4 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 ## Author
 
 - Frontend Mentor - [@Muhammad-adam778](https://www.frontendmentor.io/profile/Muhammad-adam778)
-- Linkedin - [@Muhammad-adam778](https://www.linkedin.com/in/Muhammad-adam778)
+- Linkedin - [@muhammad-abdusalam](https://www.linkedin.com/in/muhammad-abdusalam)
